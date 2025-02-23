@@ -25,6 +25,11 @@ There is a class materials repository located at:
 - We will be using standard reference materials and additional published content
 - The repository will contain additional manuals, books and guides
 
+#### Lab Environments
+
+- You will be assigned virtual machines to use during the first lab session.
+
+
 ---
 
 
