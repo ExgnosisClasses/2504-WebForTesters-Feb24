@@ -225,3 +225,209 @@ Takeaways
 - Regular validation is crucial during the development and testing phases.
 
 ---
+
+## Part 2: Basic Web Page
+
+    Create a new folder named html-lab.
+    Inside the folder, create a file named index.html.
+    Use a text editor to write and save the HTML code.
+
+### Step 1: Create the Basic HTML Skeleton
+
+- Create a new folder to hold your work
+- In the folder, create a file called index.html and add the following code (saved as index1.html in the lab folder)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My First Web Page</title>
+</head>
+<body>
+  <h1>Welcome to My Web Page</h1>
+  <p>This is a paragraph describing the purpose of the page.</p>
+</body>
+</html>
+
+```
+- `<!DOCTYPE html>`: Declares the document type - HTML 5
+- `<html>`: Root element containing the page content.
+- `<head>`: Contains metadata and the page title.
+- `<body>`: Holds all visible content.
+
+- Save the file and open it in your browser.
+- Verify the heading and paragraph appear correctly.
+
+### Step 2: Insert Images and Links
+
+Enhance your page by adding an image and a link in the body. This is done in the file index2.html
+
+```html
+<img src="hhttps://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Placeholder Image">
+<p>Visit <a href="https://www.example.com" target="_blank">Example.com</a> for more information.</p>
+```
+
+-  `<img>`: Displays an image. The alt attribute provides alternative text.
+- `<a>`: Creates a hyperlink. The target="_blank" opens the link in a new tab.
+
+-  Refresh your browser to see the image and clickable link.
+-  Test the link to ensure it opens in a new tab.
+
+### Step 3: Create Ordered and Unordered Lists
+
+Add the following code into the body of your page. This is done in the file index3.html
+
+```html
+<h2>My Hobbies</h2>
+<ul>
+  <li>Reading</li>
+  <li>Coding</li>
+  <li>Running</li>
+</ul>
+
+<h2>Steps to Make Tea</h2>
+<ol>
+  <li>Boil water.</li>
+  <li>Add tea leaves.</li>
+  <li>Pour into a cup.</li>
+</ol>
+```
+
+- `<ul>`: Unordered list with bullet points.
+- `<ol>`: Ordered list with numbered items.
+
+Check that both lists display correctly in the browser.
+
+### Step 4: Add a Table
+
+Add the following code to your file. This is also done as index4.html in the repository
+
+```html
+<h2>Weekly Schedule</h2>
+<table >
+  <tr>
+    <th>Day</th>
+    <th>Activity</th>
+  </tr>
+  <tr>
+    <td>Monday</td>
+    <td>Gym</td>
+  </tr>
+  <tr>
+    <td>Tuesday</td>
+    <td>Work</td>
+  </tr>
+</table>
+```
+
+- `<table>`: Creates a table.
+- `<tr>`: Table row, `<th>`: Header cell, `<td>`: Data cell.
+
+Verify that the table appears with borders and correct alignment.
+
+## Step 5: Add a User Input Form
+
+Add the following to the body of your web page. This is also done as index5.html in the repository
+
+```html
+<h2>Contact Form</h2>
+<form>
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required><br><br>
+
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" required><br><br>
+
+<label for="message">Message:</label><br>
+<textarea id="message" name="message" rows="4" cols="30"></textarea><br><br>
+
+<button type="submit">Submit</button>
+</form>
+```
+
+- `<form>`: Collects user input.
+- `<label>`: Provides labels for form fields.
+- `<input>` and `<textarea>`: Allow data entry.
+
+- Fill out and submit the form.
+- Note that we aren't actually submitting it anywhere
+- Observe how required fields behave when left empty.
+
+## Step 6: Inspect and Test Elements
+
+- Right-click on your web page and select "Inspect" to open DevTools.
+- Use the Elements tab to view the HTML structure.
+- Experiment by editing text and attributes directly in DevTools.
+- Use the Network tab to monitor form submission behavior.
+
+## Loading Resources
+
+### Step 1: Use Google Fonts
+
+- Visit [Google Fonts](https://fonts.google.com/).
+- Search for and select the "Roboto" font. 
+- Click "Get Embed Code" and copy the provided `<link>` tag.
+
+Example code
+
+```html
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+```
+
+### Step 2: Add the Font to the <head> Tag
+
+In your index.html file, add the link inside the <head> section: The head section should look like this
+
+```html
+<head>
+  <meta charset="UTF-8">
+  <title>My Enhanced Web Page</title>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
+</head>
+```
+This is also in file index6.html in the repository
+
+✅ Task:
+
+- Save and refresh your browser.
+- Notice the change in the text’s font style.
+
+Bonus
+- Disable the internet connection and reload the page. Check if the fallback font (sans-serif) is applied correctly.
+
+### Step 3: Create a JavaScript File
+
+- In your project folder, create a new file named script.js.
+- Add the following code:
+
+```javascript
+window.onload = function() {
+alert("Welcome to My Enhanced Web Page!");
+};
+```
+In index.html, add this line inside the <head> section: This is in index7.html
+```html
+<script src="script.js" defer></script>
+```
+
+- src="script.js": Links to your JavaScript file.
+- defer: Ensures the script runs after the HTML is fully loaded, preventing rendering delays.
+
+- Save and refresh your browser.
+- Verify that an alert box appears with the welcome message.
+
+To Try
+- Remove the defer attribute and observe the difference (the script may block rendering if placed in the head without defer).
+
+
+
