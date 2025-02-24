@@ -1,0 +1,37 @@
+/* 1. Descendant Selector (space) */
+section p {
+    color: darkgreen;
+}
+
+/* 2. Child Selector (>) */
+section > p {
+    background-color: lightyellow;
+}
+
+/* 3. Adjacent Sibling Selector (+) */
+h2 + p {
+    font-style: italic;
+    color: darkred;
+}
+
+/* 4. General Sibling Selector (~) */
+h2 ~ div p {
+    color: blue;
+}
+
+/* 5. Grouping Selector (,) */
+header, footer {
+    background-color: lightgray;
+    padding: 10px;
+}
+
+/* 6. Attribute Selector */
+a[href] {
+    color: darkblue;
+    text-decoration: none;
+}
+
+/* 7. Class and ID Selectors Combined */
+section.info > h2 {
+    text-decoration: underline;
+}
