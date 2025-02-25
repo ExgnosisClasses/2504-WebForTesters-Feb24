@@ -160,7 +160,7 @@ Built-in tools for developers to inspect and debug web applications.
 
 <img src="images/domtree1.jpg" width="600" alt="">
 
-###How the DOM Tree Works 
+### How the DOM Tree Works 
 
 #### 1. Building the DOM Tree
 
@@ -199,7 +199,7 @@ Document
 
 #### 2. Node Types in the DOM
 
-1. Element Nodes: Represent HTML elements (e.g., <div>, <p>, <h1>).
+1. Element Nodes: Represent HTML elements (e.g., `<div>`, `<p>`, `<h1>`).
 2. Text Nodes: Contain text inside elements.
 3. Attribute Nodes: Represent element attributes (e.g., class, id).
 4. Comment Nodes: Represent HTML comments.
