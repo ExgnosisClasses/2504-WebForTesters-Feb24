@@ -408,3 +408,50 @@ Use DevTools:
 - Click the Toggle device toolbar (phone/tablet icon) to test different devices.
 - Observe how media queries activate at different widths.
 
+## Part 4: SCSS
+
+To see the conversion of SCSS to CSS, go to this [website](https://beautifytools.com/scss-compiler.php) 
+
+In the SCSS pane, enter the following SCSS code and press the compile button to see the CSS
+
+```sass
+// Variables
+$primary-color: #3498db;
+$secondary-color: #e74c3c;
+$text-color: #2c3e50;
+$padding: 10px;
+
+// Mixin for button styling
+@mixin button-style($color) {
+  background-color: $color;
+  color: white;
+  padding: $padding;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($color, 10%);
+  }
+}
+
+// Nested selectors and usage of variables
+.container {
+  padding: 20px;
+  background-color: lighten($primary-color, 45%);
+
+  .info {
+    color: $text-color;
+    font-size: 16px;
+  }
+
+  .btn {
+    @include button-style($primary-color);
+
+    &.secondary {
+      @include button-style($secondary-color);
+    }
+  }
+}
+
+```
